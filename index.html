@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>InterviewIQ – AI interview preparation</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <!-- Play CDN keeps setup zero-config; swap for PostCSS Tailwind in production -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'system-ui'], display: ['Bricolage Grotesque', 'Inter'] }, colors: { ink: '#12202F', teal: { DEFAULT: '#0E7C7B', dark: '#0A5C5B' }, amber: '#F2A93B' } } } }</script>
+    <style type="text/tailwindcss">
+        @layer components{
+.card{@apply rounded-xl bg-white p-5 border border-slate-200}
+.btn{@apply inline-flex items-center justify-center rounded-lg bg-teal px-4 py-2 text-sm font-semibold text-white hover:bg-teal-dark disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber}
+.btn-ghost{@apply inline-flex items-center rounded-lg border border-slate-300 px-3 py-2 text-sm font-medium text-ink hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber}
+.input{@apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-teal focus:outline-none focus:ring-2 focus:ring-teal/30}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+
+<body class="bg-slate-50 font-sans text-ink">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
